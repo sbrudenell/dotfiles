@@ -1,0 +1,37 @@
+--style=1tbs
+
+# Add brackets for one-line conditionals.
+--add-brackets
+
+# Two space indents.
+--indent=spaces=2
+
+--indent-switches
+
+# Don't excessively indent conditional statements.
+--min-conditional-indent=0
+
+# Allow neat indentation out past 40 characters.
+--max-instatement-indent=40
+
+# Pad empty lines around blocks (if, for, while, etc).
+--break-blocks
+
+# Insert space padding around operators.
+--pad-oper
+
+# Remove extra space around parens.
+--unpad-paren
+
+# Insert a space between a header (if, for, while) and its conditional.
+--pad-header
+
+# Put asterisk next to type for pointers.
+--align-pointer=type
+
+# Linux style LF for line end.
+--lineend=linux
+
+# Break a line if it exceeds 80 characters.
+--max-code-length=80
+--break-after-logical

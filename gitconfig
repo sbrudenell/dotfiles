@@ -1,0 +1,11 @@
+[user]
+	name = Steve Brudenell
+	email = steven.brudenell@gmail.com
+
+[core]
+	editor = vim
+
+[color]
+	ui = true
+[github]
+	user = awreece
