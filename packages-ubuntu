@@ -1,5 +1,4 @@
 astyle
-pep8
-python-autopep8
+python-pip
 screen
 vim
