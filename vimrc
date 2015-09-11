@@ -24,17 +24,11 @@ filetype plugin indent on
 syntax on
 colorscheme default
 
-" Use sane regex matching. Thanks Steve Losh!
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-nnoremap / /\v
-vnoremap / /\v
-set magic
-
 " Incremental search. Highlight matching search terms.
-" Use case-sensitive search.
+" Use smart case-sensitive search.
 set incsearch
 set hlsearch
-set noignorecase
+set smartcase
 
 " When inserting a bracket, flash the matching bracket.
 set showmatch
@@ -116,3 +110,7 @@ map <C-N> :set invnumber<CR>
 " Automatically save editor state in a view.
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
+
+if filereadable(glob("~/.vimrc.local")) 
+  source ~/.vimrc.local
+endif
