@@ -20,4 +20,6 @@ fi
   sudo apt-get install $(cat packages-ubuntu)
 }
 
+pip install --upgrade $(cat pips)
+
 vim +PluginInstall +qall
