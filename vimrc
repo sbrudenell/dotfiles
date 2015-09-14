@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
 
 " Vundle initialization end
 call vundle#end()
@@ -106,6 +107,41 @@ let g:formatters_cpp = ['astyle_cpp']
 set pastetoggle=<C-P>
 
 map <C-N> :set invnumber<CR>
+
+" Cscope configuration -- I didn't like any of the prebuilt cscope.maps files.
+if has("cscope")
+  " Don't use cscope for Ctrl-] or :ta
+  set nocscopetag
+  " Check ctags for symbol definiton before cscope
+  set csto=1
+  " add any cscope database in current directory
+  if filereadable("cscope.out")
+    cs add cscope.out  
+  " else add the database pointed to by environment variable 
+  elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+  endif
+
+  " Normal cscope bindings
+  nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>  
+  nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+  nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+  " Horizontal split search results
+  nmap <C-\>hs :scs find s <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>hg :scs find g <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>hc :scs find c <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>ht :scs find t <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>he :scs find e <C-R>=expand("<cword>")<CR><CR>  
+  nmap <C-\>hf :scs find f <C-R>=expand("<cfile>")<CR><CR>  
+  nmap <C-\>hi :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>  
+  nmap <C-\>hd :scs find d <C-R>=expand("<cword>")<CR><CR>  
+endif
 
 " Automatically save editor state in a view.
 au BufWinLeave * mkview

@@ -2,3 +2,5 @@ astyle
 python-pip
 screen
 vim
+exuberant-ctags
+cscope
