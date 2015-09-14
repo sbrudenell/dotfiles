@@ -144,8 +144,8 @@ if has("cscope")
 endif
 
 " Automatically save editor state in a view.
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ? mkview
+au BufWinEnter ? silent loadview
 
 if filereadable(glob("~/.vimrc.local")) 
   source ~/.vimrc.local
