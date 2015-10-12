@@ -18,8 +18,10 @@ fi
 
 [ "x$DISTRIB_ID" == "xUbuntu" ] && {
   sudo apt-get install $(cat packages-ubuntu)
+  pip install --upgrade $(cat pips)
 }
-
-pip install --upgrade $(cat pips)
+[ "x$DISTRIB_ID" == "xGentoo" ] && {
+  sudo emerge -v $(cat packages-gentoo)
+}
 
 vim +PluginInstall +qall
