@@ -143,6 +143,15 @@ if has("cscope")
   nmap <C-\>hd :scs find d <C-R>=expand("<cword>")<CR><CR>  
 endif
 
+" Ctrl-P to search for tags and files.
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Treat the nearest ancestor containing a source control directory (.git, etc)
+" as the root of the project, awesome!
+let g:ctrlp_working_path_mode = 'ra'
+" Give CtrlP modes for searching tags and tags within current buffer.
+let g:ctrlp_extensions = [ 'tag', 'buffertag' ]
+
 " Automatically save editor state in a view.
 au BufWinLeave ? mkview
 au BufWinEnter ? silent loadview
