@@ -49,7 +49,7 @@ set number
 set numberwidth=3
 
 " Show contents of all folds. Use syntax for folding.
-set foldlevel=0
+set foldlevel=10
 set foldmethod=syntax
 
 " Show 3 lines of context above and below the cursor.
