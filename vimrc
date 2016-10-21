@@ -16,7 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Vundle initialization end
 call vundle#end()
@@ -151,6 +151,11 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 " Give CtrlP modes for searching tags and tags within current buffer.
 let g:ctrlp_extensions = [ 'tag', 'buffertag' ]
+" Ignore some directories.
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v[\/](\.git|\.hg|\.svn|node_modules)$',
+      \ 'file': '\v[\/]\.(exe|so|dll)$',
+      \ }
 
 " Automatically save editor state in a view.
 au BufWinLeave ? mkview
