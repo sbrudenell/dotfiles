@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $(dirname "$0")
-relpath=$(python -c "import os; print os.path.relpath('$PWD', '$HOME')")
+relpath=$(python2 -c "import os; print os.path.relpath('$PWD', '$HOME')")
 
 [ ! -f ~/.vimrc ] && ln -s "$relpath/vimrc" ~/.vimrc
 [ ! -d ~/.vim ] && ln -s "$relpath/vim" ~/.vim
