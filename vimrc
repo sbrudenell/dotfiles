@@ -17,6 +17,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Vundle initialization end
 call vundle#end()
