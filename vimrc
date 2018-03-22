@@ -19,6 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
+Plugin 'sophacles/vim-bundle-mako'
 
 " Vundle initialization end
 call vundle#end()
@@ -64,7 +65,7 @@ highlight ColorColumn ctermbg=darkblue ctermfg=lightgrey guibg=darkblue guifg=li
 
 " Use 2-space tabs, not hard tabs.
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 
 " Setup the status line: show the mode (insert, replace, etc), show the command,
 " and show a 'line#, col#' display. Always show the status line.
