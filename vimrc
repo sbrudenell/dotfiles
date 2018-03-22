@@ -17,6 +17,8 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'fatih/vim-go'
 
 " Vundle initialization end
 call vundle#end()
@@ -62,7 +64,6 @@ highlight ColorColumn ctermbg=darkblue ctermfg=lightgrey guibg=darkblue guifg=li
 
 " Use 2-space tabs, not hard tabs.
 set expandtab
-set softtabstop=2
 set shiftwidth=2
 
 " Setup the status line: show the mode (insert, replace, etc), show the command,
@@ -97,10 +98,20 @@ let g:formatdef_astyle_cpp = '"astyle --mode=c"'
 let g:formatters_c = ['astyle_c']
 let g:formatters_cpp = ['astyle_cpp']
 
+" Configure vim-go. Assume we have go binaries installed.
+"let g:go_fmt_command = ['goimports']
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 " Configure the syntastic plugin.
 " let g:syntastic_auto_loc_list=1		" Auto open error list when errors detected.
 " let g:syntastic_loc_list_height=3	" Error list is only 5 lines long.
 " let g:syntastic_quiet_warnings=1	" Don't bother me unles there are warnings.
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+"let g:syntastic_go_checkers = ['go']
 
 "noremap <C-P> :set invpaste paste?<CR>
 

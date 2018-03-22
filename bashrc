@@ -6,3 +6,4 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] "
 export CLICOLOR=1
 
 [ -f ~/.bashrc_local ] && source ~/.bashrc_local
+. "/Users/brudenel/.acme.sh/acme.sh.env"
