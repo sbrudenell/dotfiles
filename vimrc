@@ -20,6 +20,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'sophacles/vim-bundle-mako'
+Plugin 'posva/vim-vue'
 
 " Vundle initialization end
 call vundle#end()
