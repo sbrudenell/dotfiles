@@ -113,6 +113,8 @@ let g:go_highlight_build_constraints = 1
 " let g:syntastic_quiet_warnings=1	" Don't bother me unles there are warnings.
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 "let g:syntastic_go_checkers = ['go']
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
 
 "noremap <C-P> :set invpaste paste?<CR>
 
