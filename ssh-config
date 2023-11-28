@@ -1,0 +1,10 @@
+ForwardAgent no
+Host server.s.brudenell.name
+  User steve
+  Port 17463
+  ForwardAgent yes
+  StreamLocalBindUnlink yes
+  RemoteForward /home/steve/.gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+
+Host 10.11.0.159
+  HostKeyAlgorithms +ssh-rsa

@@ -7,6 +7,8 @@ relpath=$(python2 -c "import os; print os.path.relpath('$PWD', '$HOME')")
 [ ! -d ~/.vim ] && ln -s "$relpath/vim" ~/.vim
 [ ! -f ~/.screenrc ] && ln -s "$relpath/screenrc" ~/.screenrc
 [ ! -f ~/.astylerc ] && ln -s "$relpath/astylerc" ~/.astylerc
+[ ! -d ~/.ssh ] && mkdir ~/.ssh
+[ ! -f ~/.ssh/config ] && ln -s "$relpath/ssh-config" ~/.ssh/config
 
 if [ ! -f ~/.bashrc_local ]; then
   [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc_local
